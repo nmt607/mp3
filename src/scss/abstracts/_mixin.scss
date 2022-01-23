@@ -1,0 +1,213 @@
+//====== SEPARATE LINE  ======
+@mixin separateLine($width, $height, $bg-color, $top, $right) {
+    content: "";
+    display: block;
+    background-color: $bg-color;
+    width: $width;
+    height: $height;
+    position: absolute;
+    right: $right;
+    top: $top;
+    transform: translateY(-50%);
+}
+
+//====== BRIDGE-HOVER ======
+@mixin bridgeHover($height-bridge, $width-bridge, $right-bridge, $left-bridge) {
+    content: "";
+    display: block;
+    position: absolute;
+    height: $height-bridge;
+    width: $width-bridge;
+    top: $top-bridge;
+    right: $right-bridge;
+    left: $left-bridge;
+}
+//====== ARROW ======
+@mixin arrowUp($top, $right, $color) {
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent $color transparent;
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin arrowDown($top, $right, $color) {
+    content: "";
+    border: 20px solid;
+    border-color: $color transparent transparent transparent;
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+//====== TEXT STYLE ======
+@mixin textStyle($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin linkHover($color) {
+    &:hover {
+        color: $color;
+        text-decoration: underline;
+    }
+}
+
+//====== BUTTON ======
+@mixin button($border, $bg, $color, $padding, $border-hover, $bg-hover, $color-hover) {
+    border: 2px solid $border;
+    border-radius: 40px;
+    background-color: $bg;
+    color: $color;
+    font-weight: $font-weight-bold;
+    padding: $padding;
+    font-size: 1.6rem;
+    cursor: pointer;
+    &:hover {
+        border-color: $border-hover;
+        background-color: $bg-hover;
+        color: $color-hover;
+    }
+}
+
+//====== CAROUSEL CONTROL STYLE ======
+@mixin carousel-control() {
+    @include textStyle($color-secondary, 3.5rem, $font-weight-light);
+    &:hover {
+        color: $color-primary;
+    }
+    & {
+        &:hover &-icon {
+            background-color: #f4f5f8;
+        }
+    }
+    &-prev {
+        justify-content: flex-start;
+    }
+    &-prev-icon {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    &-next {
+        justify-content: flex-end;
+    }
+    &-next-icon {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    &-icon {
+        padding: 14px 0 14px 6px;
+        background-color: #f4f5f883;
+    }
+}
+
+//====== SCROLL ======
+@mixin scroll-style() {
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: $scrollbar-width;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+// ====== RESPONSIVE ======
+// BETWEEN-SIZES
+@mixin reponsBetween($fromScreen, $toScreen) {
+    @if map-has-key($map: $grid-breakpoints, $key: $fromScreen) and
+        map-has-key($map: $grid-breakpoints, $key: $toScreen)
+    {
+        $minValue: map-get(
+            $map: $grid-breakpoints,
+            $key: $fromScreen,
+        );
+        $maxValue: map-get(
+            $map: $grid-breakpoints,
+            $key: $toScreen,
+        );
+        $maxValue: (($maxValue - 0.02)/16) * 1em/1px;
+        @media screen and (min-width: ($minValue)) and (max-width: ($maxValue)) {
+            @content;
+        }
+    } @else {
+        @warn "#{$fromScreen} or #{$toScreen} isn't exist in breakpoints";
+    }
+}
+// MIN-WIDHT
+@mixin responMoreThan($screen) {
+    @if map-has-key($map: $grid-breakpoints, $key: $screen) {
+        $value: map-get(
+            $map: $grid-breakpoints,
+            $key: $screen,
+        );       
+        $value: ($value/16) * 1em/1px;
+        @media screen and (min-width: ($value)) {
+            @content;
+        }
+    } @else {
+        @warn "#{$screen} isn't exist in breakpoints";
+    }
+}
+// MAX-WIDHT
+@mixin responLessThan($screen) {
+    @if map-has-key($map: $grid-breakpoints, $key: $screen) {
+        $value: map-get(
+            $map: $grid-breakpoints,
+            $key: $screen,
+        );;
+        $value: (($value - 0.02)/16) * 1em/1px;
+        @media screen and (max-width: ($value)) {
+            @content;
+        }
+    } @else {
+        @warn "#{$screen} isn't exist in breakpoints";
+    }
+}
+
+// ====== RESPONSIVE EX ======
+// BETWEEN-SIZES RESPONSIVE
+@include reponsBetween("ms", "md") {
+}
+
+// MIN-WIDTH RESPONSIVE
+@include responMoreThan("ms") {
+}
+@include responMoreThan("sm") {
+}
+@include responMoreThan("md") {
+}
+@include responMoreThan("lg") {
+}
+@include responMoreThan("ml") {
+}
+@include responMoreThan("xl") {
+}
+
+// MAX-WIDTH RESPONSIVE
+@include responLessThan("xl") {
+}
+@include responLessThan("ml") {
+}
+@include responLessThan("lg") {
+}
+@include responLessThan("md") {
+}
+@include responLessThan("sm") {
+}
+@include responLessThan("ms") {
+}

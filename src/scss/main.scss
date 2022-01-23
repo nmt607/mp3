@@ -1,0 +1,52 @@
+//VENDOR
+    // BOOTSTRAP
+    // BOOTSTRAP FUNCTION - OPTION B
+    // @import './vendors/bootstrap/bootstrap-function';
+
+    // BOOTSTRAP-CUSTOMIZE REQUIRED FOR BOTH OPTIONS
+    @import './vendors/bootstrap/extensions/bootstrap-customize';
+
+    // BOOTSTRAP ALL REQUIRED - OPTION A
+    @import '../../node_modules/bootstrap/scss/bootstrap';
+
+    // BOOTSTRAP REQUIRED - OPTION B
+    // @import './vendors/bootstrap/bootstrap-stylesheets';
+
+    // BOOTSTRAP COMPONENTS OPTIONAL - OPTION B
+    // @import "./vendors/bootstrap/bootstrap-components";
+
+    // NORMALIZE
+    @import '../../node_modules/normalize.css/normalize';
+    // ANIMATE-CSS
+    @import '../../node_modules/animate.css/animate';
+    @import './vendors/animate-css/extensions/animate-css-customize';
+    // HOVER-CSS
+    @import '../../node_modules/hover.css/scss/hover.scss';
+  
+// ABSTRACTS
+    @import "abstracts/variable";
+    @import 'abstracts/mixin';
+    @import 'abstracts/function';
+    @import "abstracts/extend";
+
+// BASE
+    @import "base/base";
+    @import "base/font";
+    @import "base/typography";
+    @import "base/animations";
+
+
+// COMPONENTS
+    @import 'components/button';
+    @import './components/back-to-top';
+
+// LAYOUT
+    //HEADER
+    @import './layout/header';
+    // SECTION MEDIA
+    @import './layout/section-media';
+    //FOOTER
+    @import './layout/footer';
+
+// PAGES
+

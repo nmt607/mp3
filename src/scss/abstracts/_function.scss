@@ -1,0 +1,7 @@
+// Create animation-delay class
+@for $i from 1 through 100 { 
+        .delay-#{$i} {
+            // $delay: $i * 0.15;
+            animation-delay: #{$i * 0.075}s;
+        }
+}

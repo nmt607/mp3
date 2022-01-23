@@ -1,0 +1,10 @@
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+.btn--primary {
+    @include button(transparent, $color-primary, $color-white,6px 28px, $color-primary,transparent,$color-primary)
+}
+.btn--white {
+    @include button($color-primary, transparent, $color-primary,6px 28px, $color-primary,$color-primary,$color-white)
+}

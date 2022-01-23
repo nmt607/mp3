@@ -1,0 +1,46 @@
+//BOOTSTRAP 5.0.1 - OVERRIDE
+// === VARIABLE ===
+// CONTAINER
+// Required to declaration
+$container-max-widths: (
+    ms: 386px,
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    ml: 1050px,
+    xl: 1140px,
+    xxl: 1320px,
+);
+
+// GRID SYSTEM
+// Required to declaration
+$grid-breakpoints: (
+    xs: 0,
+    ms: 415px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    ml: 1050px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+// Optional
+// $grid-columns: 12;
+// $grid-gutter-width: 30px;
+// $gutters: (
+//   0: 0,
+//   1: $spacer * .25,
+//   2: $spacer * .5,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// );
+
+//BUTTON
+$input-btn-focus-width: 0px;
+
+//COLOR
+$primary: #ec1f55;
+$secondary: #973801;
+

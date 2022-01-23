@@ -1,0 +1,54 @@
+{
+  "songs": [
+    { 
+      "id": 0,
+      "name": "Khúc Cửu Môn Hồi Ức",
+      "singer": "辞九门回忆 DJ阿超",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - Khúc Cửu Môn Hồi Ức  Đẳng Thập Ma Quân  辞九门回忆 DJ阿超 Remix Cổ Phong TikTok.mp3",
+      "image": "http://127.0.0.1:5500/assets\\\\img\\\\khuccumonhoiuc.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Aero Chord",
+      "singer": "Surface",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - Trap  Aero Chord  Surface Monstercat Release.mp3",
+      "image": "http://127.0.0.1:5500/assets\\\\img\\\\aeroChord.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Xích Linh Remix",
+      "singer": "赤伶  DJ版",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - 赤伶  DJ版  New Ver   Xích Linh Remix  New Ver   Nhạc Hot Tik Tok Trung Quốc 2020  Douyin.mp3",
+      "image": "http://127.0.0.1:5500/assets\\\\img\\\\xichlinh.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sweet Dreams Notorious",
+      "singer": "Eurythmics",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - Eurythmics  Sweet Dreams Notorious TRP Remix.mp3",
+      "image":
+        "http://127.0.0.1:5500/assets\\\\img\\\\sweetdream.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Vicetone",
+      "singer": "Nevada ft Cozi Zuehlsdorff",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - Vicetone  Nevada ft Cozi Zuehlsdorff Lyrics.mp3",
+      "image": "http://127.0.0.1:5500/assets\\\\img\\\\nevadamp3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Túy Âm",
+      "singer": "Xesi x Masew x Nhatnguyen",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - Túy Âm  Xesi x Masew x Nhatnguyen.mp3",
+      "image": "http://127.0.0.1:5500/assets\\\\img\\\\tuyam.jpg"
+    },
+    {
+      "id": 6,
+      "name": "We Are Electric",
+      "singer": "Flying Steps",
+      "path": "http://127.0.0.1:5500/assets\\music\\y2mate.com - We Are Electric  Flying Steps  Lyrics.mp3",
+      "image": "http://127.0.0.1:5500/assets\\\\img\\\\weareelectric.jpg"
+    }
+  ]
+}
